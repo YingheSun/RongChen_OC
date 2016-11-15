@@ -66,6 +66,8 @@
      success:(successBlock)success
      failure:(failureBlock)failure
 {
+    
+    
     [self checkReachability];
     
     NSString *Str = [self getURLStrByRequsetKey:requestKey];
@@ -85,7 +87,7 @@
     
     MyLog(@"qreq%@", param);
     [mgr POST:URLStr
-   parameters:param
+    parameters:param
       success:^(AFHTTPRequestOperation *operation, id responseObject) {
           NSLog(@"应该是这个---%@",operation.response.URL);
           success(responseObject);
@@ -119,7 +121,7 @@
     
     MyLog(@"qreq%@", param);
     [mgr POST:URLStr
-   parameters:param
+      parameters:param
       success:^(AFHTTPRequestOperation *operation, id responseObject) {
           NSLog(@"应该是这个---%@",operation.response.URL);
           success(responseObject);

@@ -367,7 +367,7 @@
                           @"amount" : amountStr
                           };
     [XSHttpTool PUT:_changeAmountURL param:dic success:^(id responseObject) {
-        RCPSuccess(@"操作成功");
+//        RCPSuccess(@"操作成功");
         [self getCartInfo];
     } failure:^(NSError *error) {
         RCPError(@"添加失败");
@@ -387,7 +387,7 @@
                               @"amount" : amountStr
                               };
         [XSHttpTool PUT:_changeAmountURL param:dic success:^(id responseObject) {
-            RCPSuccess(@"操作成功");
+//            RCPSuccess(@"操作成功");
             [self getCartInfo];
         } failure:^(NSError *error) {
             RCPError(@"添加失败");
