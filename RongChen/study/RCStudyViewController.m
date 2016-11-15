@@ -248,137 +248,6 @@
         make.centerY.equalTo(stateView);
     }];
     
-    UIView *subject1View = [[UIView alloc]init];
-    subject1View.backgroundColor = [UIColor whiteColor];
-    [self.view addSubview:subject1View];
-    [subject1View mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(stateView.mas_bottom).with.offset(10);
-        make.centerX.equalTo(self.view);
-        make.height.mas_equalTo(50);
-        make.width.equalTo(self.view);
-    }];
-    
-    UILabel *subject1Title = [[UILabel alloc]init];
-    subject1Title.text = @"科目1成绩:";
-    subject1Title.textAlignment = NSTextAlignmentLeft;
-    subject1Title.textColor = [UIColor lightGrayColor];
-    [self.view addSubview:subject1Title];
-    [subject1Title mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(subject1View).with.offset(10);
-        make.width.mas_equalTo(100);
-        make.height.mas_equalTo(50);
-        make.centerY.equalTo(subject1View);
-    }];
-    
-    UILabel *subject1Detail = [[UILabel alloc]init];
-    subject1Detail.textAlignment = NSTextAlignmentRight;
-    subject1Detail.text = @"未开始";
-    [self.view addSubview:subject1Detail];
-    [subject1Detail mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(subject1View).with.offset(-10);
-        make.width.mas_equalTo(RCScreenWidth - 100);
-        make.height.mas_equalTo(50);
-        make.centerY.equalTo(subject1View);
-    }];
-    
-    UIView *subject2View = [[UIView alloc]init];
-    subject2View.backgroundColor = [UIColor whiteColor];
-    [self.view addSubview:subject2View];
-    [subject2View mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(subject1View.mas_bottom).with.offset(1);
-        make.centerX.equalTo(self.view);
-        make.height.mas_equalTo(50);
-        make.width.equalTo(self.view);
-    }];
-    
-    UILabel *subject2Title = [[UILabel alloc]init];
-    subject2Title.text = @"科目2成绩:";
-    subject2Title.textAlignment = NSTextAlignmentLeft;
-    subject2Title.textColor = [UIColor lightGrayColor];
-    [self.view addSubview:subject2Title];
-    [subject2Title mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(subject2View).with.offset(10);
-        make.width.mas_equalTo(100);
-        make.height.mas_equalTo(50);
-        make.centerY.equalTo(subject2View);
-    }];
-    
-    UILabel *subject2Detail = [[UILabel alloc]init];
-    subject2Detail.textAlignment = NSTextAlignmentRight;
-    subject2Detail.text = @"未开始";
-    [self.view addSubview:subject2Detail];
-    [subject2Detail mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(subject2View).with.offset(-10);
-        make.width.mas_equalTo(RCScreenWidth - 100);
-        make.height.mas_equalTo(50);
-        make.centerY.equalTo(subject2View);
-    }];
-    
-    UIView *subject3View = [[UIView alloc]init];
-    subject3View.backgroundColor = [UIColor whiteColor];
-    [self.view addSubview:subject3View];
-    [subject3View mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(subject2View.mas_bottom).with.offset(1);
-        make.centerX.equalTo(self.view);
-        make.height.mas_equalTo(50);
-        make.width.equalTo(self.view);
-    }];
-    
-    UILabel *subject3Title = [[UILabel alloc]init];
-    subject3Title.text = @"科目3成绩:";
-    subject3Title.textAlignment = NSTextAlignmentLeft;
-    subject3Title.textColor = [UIColor lightGrayColor];
-    [self.view addSubview:subject3Title];
-    [subject3Title mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(subject3View).with.offset(10);
-        make.width.mas_equalTo(100);
-        make.height.mas_equalTo(50);
-        make.centerY.equalTo(subject3View);
-    }];
-    
-    UILabel *subject3Detail = [[UILabel alloc]init];
-    subject3Detail.textAlignment = NSTextAlignmentRight;
-    subject3Detail.text = @"未开始";
-    [self.view addSubview:subject3Detail];
-    [subject3Detail mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(subject3View).with.offset(-10);
-        make.width.mas_equalTo(RCScreenWidth - 100);
-        make.height.mas_equalTo(50);
-        make.centerY.equalTo(subject3View);
-    }];
-    
-    UIView *subject4View = [[UIView alloc]init];
-    subject4View.backgroundColor = [UIColor whiteColor];
-    [self.view addSubview:subject4View];
-    [subject4View mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(subject3View.mas_bottom).with.offset(1);
-        make.centerX.equalTo(self.view);
-        make.height.mas_equalTo(50);
-        make.width.equalTo(self.view);
-    }];
-    
-    UILabel *subject4Title = [[UILabel alloc]init];
-    subject4Title.text = @"科目4成绩:";
-    subject4Title.textAlignment = NSTextAlignmentLeft;
-    subject4Title.textColor = [UIColor lightGrayColor];
-    [self.view addSubview:subject4Title];
-    [subject4Title mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(subject4View).with.offset(10);
-        make.width.mas_equalTo(100);
-        make.height.mas_equalTo(50);
-        make.centerY.equalTo(subject4View);
-    }];
-    
-    UILabel *subject4Detail = [[UILabel alloc]init];
-    subject4Detail.textAlignment = NSTextAlignmentRight;
-    subject4Detail.text = @"未开始";
-    [self.view addSubview:subject4Detail];
-    [subject4Detail mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(subject4View).with.offset(-10);
-        make.width.mas_equalTo(RCScreenWidth - 100);
-        make.height.mas_equalTo(50);
-        make.centerY.equalTo(subject4View);
-    }];
     
     //    //教练信息
     //    UIView *coachView = [[UIView alloc]init];
@@ -475,6 +344,150 @@
     //    }];
     
     for (int i = 0; i < subjectInfo.count ; i++) {
+        UIView *subject1View = [[UIView alloc]init];
+        subject1View.backgroundColor = [UIColor whiteColor];
+        [self.view addSubview:subject1View];
+        [subject1View mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(stateView.mas_bottom).with.offset(10);
+            make.centerX.equalTo(self.view);
+            make.height.mas_equalTo(50);
+            make.width.equalTo(self.view);
+        }];
+        
+        UILabel *subject1Title = [[UILabel alloc]init];
+        if(subjectInfo[0][@"itemName"]){
+            subject1Title.text = subjectInfo[0][@"itemName"];
+        }
+        subject1Title.textAlignment = NSTextAlignmentLeft;
+        subject1Title.textColor = [UIColor lightGrayColor];
+        [self.view addSubview:subject1Title];
+        [subject1Title mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(subject1View).with.offset(10);
+            make.width.mas_equalTo(100);
+            make.height.mas_equalTo(50);
+            make.centerY.equalTo(subject1View);
+        }];
+        
+        UILabel *subject1Detail = [[UILabel alloc]init];
+        subject1Detail.textAlignment = NSTextAlignmentRight;
+        subject1Detail.text = @"未开始";
+        [self.view addSubview:subject1Detail];
+        [subject1Detail mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.right.equalTo(subject1View).with.offset(-10);
+            make.width.mas_equalTo(RCScreenWidth - 100);
+            make.height.mas_equalTo(50);
+            make.centerY.equalTo(subject1View);
+        }];
+        
+        UIView *subject2View = [[UIView alloc]init];
+        subject2View.backgroundColor = [UIColor whiteColor];
+        [self.view addSubview:subject2View];
+        [subject2View mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(subject1View.mas_bottom).with.offset(1);
+            make.centerX.equalTo(self.view);
+            make.height.mas_equalTo(50);
+            make.width.equalTo(self.view);
+        }];
+        
+        UILabel *subject2Title = [[UILabel alloc]init];
+        if(subjectInfo[1][@"itemName"]){
+            subject2Title.text = subjectInfo[1][@"itemName"];
+        }
+        subject2Title.textAlignment = NSTextAlignmentLeft;
+        subject2Title.textColor = [UIColor lightGrayColor];
+        [self.view addSubview:subject2Title];
+        [subject2Title mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(subject2View).with.offset(10);
+            make.width.mas_equalTo(100);
+            make.height.mas_equalTo(50);
+            make.centerY.equalTo(subject2View);
+        }];
+        
+        UILabel *subject2Detail = [[UILabel alloc]init];
+        subject2Detail.textAlignment = NSTextAlignmentRight;
+        subject2Detail.text = @"未开始";
+        [self.view addSubview:subject2Detail];
+        [subject2Detail mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.right.equalTo(subject2View).with.offset(-10);
+            make.width.mas_equalTo(RCScreenWidth - 100);
+            make.height.mas_equalTo(50);
+            make.centerY.equalTo(subject2View);
+        }];
+        
+        UIView *subject3View = [[UIView alloc]init];
+        subject3View.backgroundColor = [UIColor whiteColor];
+        [self.view addSubview:subject3View];
+        [subject3View mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(subject2View.mas_bottom).with.offset(1);
+            make.centerX.equalTo(self.view);
+            make.height.mas_equalTo(50);
+            make.width.equalTo(self.view);
+        }];
+        
+        UILabel *subject3Title = [[UILabel alloc]init];
+        if(subjectInfo[2][@"itemName"]){
+            subject3Title.text = subjectInfo[2][@"itemName"];
+        }
+        subject3Title.textAlignment = NSTextAlignmentLeft;
+        subject3Title.textColor = [UIColor lightGrayColor];
+        [self.view addSubview:subject3Title];
+        [subject3Title mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(subject3View).with.offset(10);
+            make.width.mas_equalTo(100);
+            make.height.mas_equalTo(50);
+            make.centerY.equalTo(subject3View);
+        }];
+        
+        UILabel *subject3Detail = [[UILabel alloc]init];
+        subject3Detail.textAlignment = NSTextAlignmentRight;
+        subject3Detail.text = @"未开始";
+        [self.view addSubview:subject3Detail];
+        [subject3Detail mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.right.equalTo(subject3View).with.offset(-10);
+            make.width.mas_equalTo(RCScreenWidth - 100);
+            make.height.mas_equalTo(50);
+            make.centerY.equalTo(subject3View);
+        }];
+        
+        UIView *subject4View = [[UIView alloc]init];
+        if( i == 3 ){
+        subject4View.backgroundColor = [UIColor whiteColor];
+        }
+        [self.view addSubview:subject4View];
+        [subject4View mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(subject3View.mas_bottom).with.offset(1);
+            make.centerX.equalTo(self.view);
+            make.height.mas_equalTo(50);
+            make.width.equalTo(self.view);
+        }];
+        
+        UILabel *subject4Title = [[UILabel alloc]init];
+        if(i == 3){
+            subject4Title.text = subjectInfo[3][@"itemName"];
+        }
+        subject4Title.textAlignment = NSTextAlignmentLeft;
+        subject4Title.textColor = [UIColor lightGrayColor];
+        [self.view addSubview:subject4Title];
+        [subject4Title mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(subject4View).with.offset(10);
+            make.width.mas_equalTo(100);
+            make.height.mas_equalTo(50);
+            make.centerY.equalTo(subject4View);
+        }];
+        
+        UILabel *subject4Detail = [[UILabel alloc]init];
+        subject4Detail.textAlignment = NSTextAlignmentRight;
+        if(i == 3){
+        subject4Detail.text = @"未开始";
+        }
+        [self.view addSubview:subject4Detail];
+        [subject4Detail mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.right.equalTo(subject4View).with.offset(-10);
+            make.width.mas_equalTo(RCScreenWidth - 100);
+            make.height.mas_equalTo(50);
+            make.centerY.equalTo(subject4View);
+        }];
+
         if ([subjectInfo[i][@"status"] isEqualToString:@"wait"]) {
             NSLog(@"%@ is unDone set default text<未开始> at step: => %@",subjectInfo[i][@"itemName"],subjectInfo[i][@"step"]);
         }else{

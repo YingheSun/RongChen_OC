@@ -120,7 +120,7 @@
                               @"recommendUserName" : _nameField.text,
                               @"user" : userId
                               };
-        [XSHttpTool GET:_recommendsURL param:dic success:^(id responseObject) {
+        [XSHttpTool POST:_recommendsURL param:dic success:^(id responseObject) {
             RCPSuccess(@"提交成功");
             RCRecommendSuccessViewController *successVC = [[RCRecommendSuccessViewController alloc]init];
             successVC.phoneStr = _PhoneField.text;

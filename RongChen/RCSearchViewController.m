@@ -137,6 +137,7 @@
 #pragma mark - 处理数据
 - (void)resolveData:(NSArray *)dataArr andType:(NSString *)type{
     if ([type isEqualToString:@"main"]) {
+        [_articles removeAllObjects];
         [_articles addObjectsFromArray:dataArr];
         NSLog(@"%@",_articles);
         _page ++;

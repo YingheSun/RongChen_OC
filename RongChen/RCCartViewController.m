@@ -225,7 +225,7 @@
         priceView.numberOfLines = 4;
         [_commView addSubview:priceView];
         
-        UIImageView *addImg = [[UIImageView alloc]initWithFrame:CGRectMake(RCScreenWidth * 0.6, 10, 30, 30)];
+        UIImageView *addImg = [[UIImageView alloc]initWithFrame:CGRectMake(RCScreenWidth * 0.6, 10, 20, 20)];
         addImg.image = [UIImage imageNamed:@"加号"];
 
         [_commView addSubview:addImg];
@@ -242,15 +242,15 @@
         [_commView addSubview:addView];
         
         
-        _amountLabel = [[UILabel alloc]initWithFrame:CGRectMake(RCScreenWidth * 0.6 + 30, 10 , 30, 30)];
-        _amountLabel.textAlignment = NSTextAlignmentRight;
+        _amountLabel = [[UILabel alloc]initWithFrame:CGRectMake(RCScreenWidth * 0.6 + 30, 0 , 40, 40)];
+        _amountLabel.textAlignment = NSTextAlignmentCenter;
         _amountLabel.font = [UIFont systemFontOfSize:10.0f];
         _amountLabel.text = goodInfo.amount;
         _amountLabel.textColor = [UIColor grayColor];
         [_commView addSubview:_amountLabel];
         
         
-        UIImageView *minusImg = [[UIImageView alloc]initWithFrame:CGRectMake(RCScreenWidth * 0.6 + 70, 10, 30, 30)];
+        UIImageView *minusImg = [[UIImageView alloc]initWithFrame:CGRectMake(RCScreenWidth * 0.6 + 70, 10, 20, 20)];
         minusImg.image = [UIImage imageNamed:@"减号"];
         minusImg.tag = 1000 + i;
         [_commView addSubview:minusImg];
@@ -265,6 +265,22 @@
         tapGesture1.numberOfTouchesRequired=1;//点按的手指数
         [minusView addGestureRecognizer:tapGesture1];
         [_commView addSubview:minusView];
+        
+        UIImageView *rubbishImg = [[UIImageView alloc]initWithFrame:CGRectMake(RCScreenWidth * 0.7 + 70, 30, 15, 15)];
+        rubbishImg.image = [UIImage imageNamed:@"垃圾箱"];
+        rubbishImg.tag = 10000 + i;
+        [_commView addSubview:rubbishImg];
+        
+        UIView *rubblishView = [[UIView alloc]initWithFrame:CGRectMake(RCScreenWidth * 0.7 + 70, 20, 30, 30)];
+        rubblishView.tag = 10000 + i;
+        //添加点按击手势监听器
+        UITapGestureRecognizer *tapGestureR=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapRubblishView:)];
+        //设置手势属性
+        tapGestureR.delegate = self;
+        tapGestureR.numberOfTapsRequired=1;//设置点按次数，为1
+        tapGestureR.numberOfTouchesRequired=1;//点按的手指数
+        [rubblishView addGestureRecognizer:tapGestureR];
+        [_commView addSubview:rubblishView];
         
         _totalPrice = _totalPrice + [goodInfo.productPrice integerValue] * [goodInfo.amount integerValue];
         
@@ -377,14 +393,14 @@
             RCPError(@"添加失败");
         }];
     }else{
-        _changeAmountURL = [NSString stringWithFormat:@"shopcars/%@",goodInfo.id];
-        [XSHttpTool DELETE:_changeAmountURL param:nil success:^(id responseObject) {
-            RCPSuccess(@"操作成功，一个商品已删除");
-            [self getCartInfo];
-        } failure:^(NSError *error) {
-            RCPError(@"操作失败");
-            [self getCartInfo];
-        }];
+//        _changeAmountURL = [NSString stringWithFormat:@"shopcars/%@",goodInfo.id];
+//        [XSHttpTool DELETE:_changeAmountURL param:nil success:^(id responseObject) {
+//            RCPSuccess(@"操作成功，一个商品已删除");
+//            [self getCartInfo];
+//        } failure:^(NSError *error) {
+//            RCPError(@"操作失败");
+//            [self getCartInfo];
+//        }];
     }
 }
 
@@ -399,5 +415,19 @@
     [self.navigationController pushViewController:orderVC animated:YES];
 }
 
+
+-(void)tapRubblishView:( UITapGestureRecognizer *)tap{
+    NSLog(@"tapped to delete=> %ld",tap.view.tag - 10000);
+    NSArray *goodListArray = [RCGoods mj_objectArrayWithKeyValuesArray:_cartArr];
+    RCGoods *goodInfo = goodListArray[tap.view.tag - 10000];
+    _changeAmountURL = [NSString stringWithFormat:@"shopcars/%@",goodInfo.id];
+            [XSHttpTool DELETE:_changeAmountURL param:nil success:^(id responseObject) {
+//                RCPSuccess(@"操作成功，一个商品已删除");
+                [self getCartInfo];
+            } failure:^(NSError *error) {
+                RCPError(@"操作失败");
+                [self getCartInfo];
+            }];
+}
 
 @end

@@ -115,11 +115,9 @@
     commentTitleLabel.text = @"详情简介";
     [commentView addSubview:commentTitleLabel];
     
-    UILabel *commentLabel = [[UILabel alloc]initWithFrame:CGRectMake(10, 40, RCScreenWidth, 100)];
-    commentLabel.text = self.productInfo.content;
-    commentLabel.textColor = [UIColor lightGrayColor];
-    commentLabel.textAlignment = NSTextAlignmentNatural;
-    commentLabel.numberOfLines = 4;
+    UIWebView *commentLabel = [[UIWebView alloc]initWithFrame:CGRectMake(0, 40, RCScreenWidth, RCScreenHeight - RCScreenWidth / 6 * 5 - 100)];
+    NSString *commentStr = [NSString stringWithFormat:@"%@",self.productInfo.content];
+    [commentLabel loadHTMLString:commentStr baseURL:nil];
     [commentView addSubview:commentLabel];
     
     UIButton *getProductBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, RCScreenHeight - 50, RCScreenWidth, 50)];

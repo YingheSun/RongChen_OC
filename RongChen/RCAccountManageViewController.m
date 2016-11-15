@@ -30,7 +30,7 @@
     NSString *userIdStr = getLocalData(RCUserId)
     NSString *requestStr = [NSString stringWithFormat:@"userProfiles/%@",userIdStr];
     _putInfoRequest = requestStr;
-    _gender = @"Male";
+    _gender = self.sex;
     [self setBarView];
     [self makeViewAppear];
 }
@@ -64,7 +64,7 @@
     [self.view addSubview:_nameTextField];
     [_nameTextField.layer setCornerRadius:5.0f];
     [_nameTextField setClipsToBounds:YES];
-//    _nameTextField.placeholder = @"昵称";
+    _nameTextField.text = self.name;
     _nameTextField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
     _nameTextField.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
     _nameTextField.backgroundColor = [UIColor whiteColor];
@@ -176,6 +176,12 @@
         make.height.mas_equalTo(60);
         make.width.mas_equalTo(50);
     }];
+    
+    if([self.sex isEqualToString:@"Male"]){
+        [self maleClicked];
+    }else{
+        [self femaleClicked];
+    }
     
     UIButton *commitBtn = [[UIButton alloc]init];
     [self.view addSubview:commitBtn];

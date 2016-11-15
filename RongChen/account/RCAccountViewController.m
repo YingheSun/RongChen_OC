@@ -225,6 +225,9 @@
     
     RCAccountManageViewController *accountManageVC = [[RCAccountManageViewController alloc]init];
     
+    accountManageVC.name = _userInfoArr[0][@"realName"];
+    accountManageVC.sex = _userInfoArr[0][@"gender"];
+    
     [self.navigationController pushViewController:accountManageVC animated:YES];
     self.hidesBottomBarWhenPushed=NO;
 }

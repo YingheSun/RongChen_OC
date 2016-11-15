@@ -52,6 +52,7 @@
 		6EFA47F71DD47BA800F7F1C4 /* RCOrderDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EFA47F61DD47BA800F7F1C4 /* RCOrderDetailViewController.m */; };
 		6EFD67891DD16B34004137A7 /* RCOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EFD67881DD16B34004137A7 /* RCOrderViewController.m */; };
 		6EFD67DD1DD1C355004137A7 /* RCOrderPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EFD67DC1DD1C355004137A7 /* RCOrderPost.m */; };
+		7FFCC61E1DDAA6860050A259 /* 垃圾箱.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FFCC61D1DDAA6860050A259 /* 垃圾箱.png */; };
 		8F076E4D1D97FD64001AF967 /* RCMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F076E4C1D97FD64001AF967 /* RCMainViewController.m */; };
 		8F076E501D97FD96001AF967 /* RCCoachViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F076E4F1D97FD96001AF967 /* RCCoachViewController.m */; };
 		8F076E541D97FDBB001AF967 /* RCAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F076E531D97FDBB001AF967 /* RCAccountViewController.m */; };
@@ -202,6 +203,7 @@
 		6EFD67881DD16B34004137A7 /* RCOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCOrderViewController.m; sourceTree = "<group>"; };
 		6EFD67DB1DD1C355004137A7 /* RCOrderPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCOrderPost.h; sourceTree = "<group>"; };
 		6EFD67DC1DD1C355004137A7 /* RCOrderPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCOrderPost.m; sourceTree = "<group>"; };
+		7FFCC61D1DDAA6860050A259 /* 垃圾箱.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "垃圾箱.png"; sourceTree = "<group>"; };
 		8567E349CCFF281278AD7596 /* Pods-RongChen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RongChen.release.xcconfig"; path = "Pods/Target Support Files/Pods-RongChen/Pods-RongChen.release.xcconfig"; sourceTree = "<group>"; };
 		8F076E4B1D97FD64001AF967 /* RCMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RCMainViewController.h; path = main/RCMainViewController.h; sourceTree = "<group>"; };
 		8F076E4C1D97FD64001AF967 /* RCMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RCMainViewController.m; path = main/RCMainViewController.m; sourceTree = "<group>"; };
@@ -453,8 +455,8 @@
 			isa = PBXGroup;
 			children = (
 				6ECD824D1D97AA41000F42A9 /* Common.h */,
-				8F590F861D9B500C00916ABD /* XSHttpTool.h */,
 				8F590F871D9B500C00916ABD /* XSHttpTool.m */,
+				8F590F861D9B500C00916ABD /* XSHttpTool.h */,
 				6ECD824E1D97AA62000F42A9 /* RCPrefixHeader.pch */,
 			);
 			name = Common;
@@ -587,6 +589,7 @@
 		8F076E5E1D980084001AF967 /* pictures */ = {
 			isa = PBXGroup;
 			children = (
+				7FFCC61D1DDAA6860050A259 /* 垃圾箱.png */,
 				6ED16AF11DD099C500965284 /* 加号.png */,
 				6ED16AF31DD099C500965284 /* 减号.png */,
 				6E4088991DB0EFB600ABD754 /* 提现@2x.png */,
@@ -794,6 +797,7 @@
 				8F9AD6CF1D98C85200084BD0 /* loginBtn.png in Resources */,
 				6E3073ED1DAF866000567B06 /* 发送@3x.png in Resources */,
 				6E0F8DAA1DCC227200FC4AD5 /* cart@2x.png in Resources */,
+				7FFCC61E1DDAA6860050A259 /* 垃圾箱.png in Resources */,
 				8F9AD6CC1D98BBDF00084BD0 /* phone@2x.png in Resources */,
 				8F076E781D9807E4001AF967 /* 首页@3x.png in Resources */,
 				8F076E831D9807E4001AF967 /* 学车@2x.png in Resources */,

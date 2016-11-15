@@ -113,7 +113,7 @@
             [coverImage setImage:[UIImage imageNamed:@"defaultLoading"]];
         }else{
             NSString *imgStrURL = [NSString stringWithFormat:@"%@%@%@",RCImageURL,imageStr,@"@!mobile"];
-            //            NSLog(@"loading => %@ ",imgStrURL);
+            NSLog(@"loading => %@ ",imgStrURL);
             [coverImage sd_setImageWithURL:[NSURL URLWithString:imgStrURL] placeholderImage:[UIImage imageNamed:@"defaultLoading"]];
         }
         coverImage.layer.cornerRadius = 5.0f;
