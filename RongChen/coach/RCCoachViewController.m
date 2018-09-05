@@ -47,7 +47,7 @@
 #pragma mark - navigationbar导航栏设置
 -(void)setBarView{
     //左侧的slider menu 取消
-    self.navigationItem.title = @"教练";
+    self.navigationItem.title = @"智库作者";
     //    UIBarButtonItem *LeftItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"menu"] style:UIBarButtonItemStylePlain target:self action:@selector(sliderMenuShow)];
     UIBarButtonItem *RightItem=[[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(searchViewShow)];
     //    self.navigationItem.leftBarButtonItem = LeftItem;

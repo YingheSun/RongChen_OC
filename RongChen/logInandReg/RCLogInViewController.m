@@ -16,7 +16,7 @@
 
 @property(nonatomic,strong) NSString *phoneNum;
 @property(nonatomic,strong) NSString *passCode;
-@property(nonatomic,strong) NSString *token;
+//@property(nonatomic,strong) NSString *token;
 
 @property(nonatomic,strong) UITextField *phoneTextField;
 @property(nonatomic,strong) UITextField *passWordTextField;
@@ -211,7 +211,7 @@
     _phoneNum = getLocalData(RCPhoneNumber);
     NSString *passWordStr = getLocalData(RCPassCode);
     _passCode = [self md5HexDigest:passWordStr];
-    _token = getLocalData(RCToken);
+//    _token = getLocalData(RCToken);
     [_phoneTextField setText:_phoneNum];
     [_passWordTextField setText:_passCode];
     [self commitRequest];
@@ -253,6 +253,12 @@
 
 #pragma mark -- 提交登录请求
 - (void)commitRequest{
+    //进入主页
+    //testingCHG
+    MainTabBarController *mainVC = [[MainTabBarController alloc] init];
+    [self.navigationController pushViewController:mainVC animated:true];
+    
+    
     [self resolvePhoneValidation];
     [self resolvePassword];
     if(_phoneNum.length == 0 || _passCode.length == 0){

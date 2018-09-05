@@ -81,7 +81,7 @@
     //按钮高亮状态
     NSArray *selectedImages=@[@"首页",@"推荐",@"学车",@"教练",@"我的"];
     //按钮标题
-    NSArray *titlesArray=@[@"首页",@"推荐",@"学车",@"教练",@"我的"];
+    NSArray *titlesArray=@[@"首页",@"文件浏览",@"最新文章",@"作者",@"我的帐号"];
     //主页
     _mainVC = [[RCMainViewController alloc] init];
     _mainVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:titlesArray[0] image:[self fetUIImage:normalImages[0]] selectedImage:[self fetUIImage:selectedImages[0]]];

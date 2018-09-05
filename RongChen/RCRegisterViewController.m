@@ -68,8 +68,8 @@
     [backImage mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.view).with.offset(0.05 * RCScreenHeight);
         make.left.equalTo(self.view).with.offset(25);
-        make.height.mas_equalTo(27);
-        make.width.mas_equalTo(15);
+        make.height.mas_equalTo(25);
+        make.width.mas_equalTo(13);
     }];
     
     UIButton *backButton = [[UIButton alloc]init];
@@ -86,7 +86,7 @@
     UIView *phoneArea = [[UIView alloc]init];
     [self.view addSubview:phoneArea];
     [phoneArea mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.view).with.offset(0.3 * RCScreenHeight);
+        make.top.equalTo(self.view).with.offset(0.4 * RCScreenHeight);
         make.left.equalTo(self.view).with.offset(25);
         make.height.mas_equalTo(61);
         make.width.mas_equalTo(RCScreenWidth - 60);
@@ -160,7 +160,7 @@
     [_sendMsgBtn setClipsToBounds:YES];
     [_sendMsgBtn setTitle:@"获取验证码" forState:UIControlStateNormal];
     _sendMsgBtn.titleLabel.font = [UIFont systemFontOfSize: 15.0f];
-    [_sendMsgBtn setTitleColor:[UIColor colorWithRed:30.0f/255.0f green:190.0f/255.0f blue:144.0f/255.0f alpha:1] forState:UIControlStateNormal];
+    [_sendMsgBtn setTitleColor:[UIColor colorWithRed:41.0f/255.0f green:132.0f/255.0f blue:196.0f/255.0f alpha:1] forState:UIControlStateNormal];
     [_sendMsgBtn setBackgroundImage:[UIImage imageNamed:@"msgBtn"] forState:UIControlStateNormal];
     [_sendMsgBtn addTarget:self action:@selector(sendMessage) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_sendMsgBtn];
@@ -280,6 +280,8 @@
 
 #pragma mark - 提交请求
 - (void)commitRequest{
+
+    
     [self resolvePhoneValidation];
     [self resolvePassword];
     if(_phoneNum.length == 0 || _passCode.length == 0 || _messageTextField.text.length == 0){

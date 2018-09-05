@@ -38,7 +38,7 @@
 
 #pragma mark - navigationbar导航栏设置
 -(void)setBarView{
-    self.navigationItem.title = @"推荐学车";
+    self.navigationItem.title = @"文件浏览";
     //左侧的slider menu 取消
 //    UIBarButtonItem *LeftItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"menu"] style:UIBarButtonItemStylePlain target:self action:@selector(sliderMenuShow)];
 //    self.navigationItem.leftBarButtonItem = LeftItem;
@@ -69,7 +69,7 @@
     [self.view addSubview:_PhoneField];
     [_PhoneField.layer setCornerRadius:5.0f];
     [_PhoneField setClipsToBounds:YES];
-    _PhoneField.placeholder = @"手机号码";
+    _PhoneField.placeholder = @"请输入文件的编号";
     _PhoneField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
     _PhoneField.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
     _PhoneField.backgroundColor = [UIColor whiteColor];
@@ -80,22 +80,22 @@
         make.width.mas_equalTo(RCScreenWidth * 0.8);
     }];
     
-    _nameField = [[UITextField alloc]init];
-    [self.view addSubview:_nameField];
-    [_nameField.layer setCornerRadius:5.0f];
-    [_nameField setClipsToBounds:YES];
-    _nameField.placeholder = @"姓名";
-    _nameField.backgroundColor = [UIColor whiteColor];
-    [_nameField mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.equalTo(self.view);
-        make.top.equalTo(_PhoneField.mas_bottom).with.mas_offset(RCScreenHeight * 0.01);
-        make.height.mas_equalTo(50);
-        make.width.mas_equalTo(RCScreenWidth * 0.8);
-    }];
+//    _nameField = [[UITextField alloc]init];
+//    [self.view addSubview:_nameField];
+//    [_nameField.layer setCornerRadius:5.0f];
+//    [_nameField setClipsToBounds:YES];
+//    _nameField.placeholder = @"姓名";
+//    _nameField.backgroundColor = [UIColor whiteColor];
+//    [_nameField mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.centerX.equalTo(self.view);
+//        make.top.equalTo(_PhoneField.mas_bottom).with.mas_offset(RCScreenHeight * 0.01);
+//        make.height.mas_equalTo(50);
+//        make.width.mas_equalTo(RCScreenWidth * 0.8);
+//    }];
     
     UIButton *commitBtn = [[UIButton alloc]init];
     [self.view addSubview:commitBtn];
-    [commitBtn setTitle:@"推 荐" forState:UIControlStateNormal];
+    [commitBtn setTitle:@"搜索" forState:UIControlStateNormal];
     commitBtn.titleLabel.font = [UIFont systemFontOfSize: 22.0f];
     [commitBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [commitBtn setBackgroundImage:[UIImage imageNamed:@"loginBtn"] forState:UIControlStateNormal];
@@ -104,7 +104,7 @@
     [commitBtn addTarget:self action:@selector(commitRequest) forControlEvents:UIControlEventTouchUpInside];
     [commitBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self.view);
-        make.top.equalTo(_nameField.mas_bottom).with.mas_offset(RCScreenHeight * 0.05);
+        make.top.equalTo(_PhoneField.mas_bottom).with.mas_offset(RCScreenHeight * 0.05);
         make.height.mas_equalTo(50);
         make.width.mas_equalTo(RCScreenWidth * 0.8);
     }];

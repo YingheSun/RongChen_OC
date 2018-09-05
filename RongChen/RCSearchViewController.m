@@ -50,7 +50,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     _searchView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, RCScreenWidth, self.navigationController.navigationBar.frame.size.height + 20)];
-    _searchView.backgroundColor = [UIColor colorWithRed:30.0f/255.0f green:190.0f/255.0f blue:144.0f/255.0f alpha:1];
+    _searchView.backgroundColor = [UIColor colorWithRed:41.0f/255.0f green:132.0f/255.0f blue:196.0f/255.0f alpha:1];
     [self.view addSubview:_searchView];
     _newsView = nil;
     

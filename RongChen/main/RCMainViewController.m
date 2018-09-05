@@ -61,10 +61,10 @@
 #pragma mark - navigationbar导航栏设置
 -(void)setBarView{
     //左侧的slider menu 取消
-    self.navigationItem.title = @"新闻公告";
-//    UIBarButtonItem *LeftItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"menu"] style:UIBarButtonItemStylePlain target:self action:@selector(sliderMenuShow)];
+    self.navigationItem.title = @"主页";
+    UIBarButtonItem *LeftItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"menu"] style:UIBarButtonItemStylePlain target:self action:@selector(sliderMenuShow)];
     UIBarButtonItem *RightItem=[[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(searchViewShow)];
-//    self.navigationItem.leftBarButtonItem = LeftItem;
+    self.navigationItem.leftBarButtonItem = LeftItem;
     self.navigationItem.rightBarButtonItem = RightItem;
     UIBarButtonItem *backItem = [[UIBarButtonItem alloc] init];
     backItem.title = @"";
@@ -109,11 +109,26 @@
             mainTabVC.selectedIndex = 1;
         }
             break;
-        case 2:
+        case 2:{
+            NSLog(@"menu open newArticleVC");
+            MainTabBarController *mainTabVC = [[MainTabBarController alloc] init];
+            [UIApplication sharedApplication].delegate.window.rootViewController = mainTabVC;
+            mainTabVC.selectedIndex = 2;
+        }
             break;
-        case 3:
+        case 3:{
+            NSLog(@"menu open newArticleVC");
+            MainTabBarController *mainTabVC = [[MainTabBarController alloc] init];
+            [UIApplication sharedApplication].delegate.window.rootViewController = mainTabVC;
+            mainTabVC.selectedIndex = 3;
+        }
             break;
-        case 4:
+        case 4:{
+            NSLog(@"menu open newArticleVC");
+            MainTabBarController *mainTabVC = [[MainTabBarController alloc] init];
+            [UIApplication sharedApplication].delegate.window.rootViewController = mainTabVC;
+            mainTabVC.selectedIndex = 4;
+        }
             break;
         default:
             break;

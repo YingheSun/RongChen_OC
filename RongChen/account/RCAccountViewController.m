@@ -59,7 +59,7 @@
 #pragma mark - navigationbar导航栏设置
 - (void)setBarView{
     //左侧的slider menu 取消
-    self.navigationItem.title = @"账户信息";
+    self.navigationItem.title = @"我的账户";
     UIBarButtonItem *backItem = [[UIBarButtonItem alloc] init];
     backItem.title = @"";
     self.navigationItem.backBarButtonItem = backItem;

@@ -65,7 +65,7 @@
     [_phoneTextField mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self.view);
         make.top.equalTo(self.view).with.mas_offset(RCScreenHeight * 0.3);
-        make.height.mas_equalTo(60);
+        make.height.mas_equalTo(50);
         make.width.mas_equalTo(RCScreenWidth * 0.8);
     }];
     
@@ -78,7 +78,7 @@
     [_messageTextField mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self.view);
         make.top.equalTo(_phoneTextField.mas_bottom).with.mas_offset(RCScreenHeight * 0.01);
-        make.height.mas_equalTo(60);
+        make.height.mas_equalTo(50);
         make.width.mas_equalTo(RCScreenWidth * 0.8);
     }];
     
@@ -108,7 +108,7 @@
     [_passWordTextField mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self.view);
         make.top.equalTo(_messageTextField.mas_bottom).with.mas_offset(RCScreenHeight * 0.01);
-        make.height.mas_equalTo(60);
+        make.height.mas_equalTo(50);
         make.width.mas_equalTo(RCScreenWidth * 0.8);
     }];
     
@@ -124,7 +124,7 @@
     [commitBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self.view);
         make.top.equalTo(_passWordTextField.mas_bottom).with.mas_offset(RCScreenHeight * 0.05);
-        make.height.mas_equalTo(60);
+        make.height.mas_equalTo(50);
         make.width.mas_equalTo(RCScreenWidth * 0.8);
     }];
 }

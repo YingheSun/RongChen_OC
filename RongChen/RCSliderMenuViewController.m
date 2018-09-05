@@ -47,7 +47,7 @@
     [headerView addSubview:imageview];
     
     UILabel *NameLabel = [[UILabel alloc]initWithFrame:CGRectMake(imageview.frame.size.width + imageview.frame.origin.x * 2, imageview.frame.origin.y, 90, imageview.frame.size.height)];
-    [NameLabel setText:@"隔壁老王"];
+    [NameLabel setText:@"郭志达"];
     [headerView addSubview:NameLabel];
     
     UIView *lineView = [[UIView alloc]initWithFrame:CGRectMake(0, 119, Frame_Width, 1)];

@@ -41,12 +41,12 @@
 }
 
 - (void)setBarView{
-    self.navigationItem.title = @"学车";
+    self.navigationItem.title = @"最新文章";
 }
 
 - (void)showView{
     self.view.backgroundColor = [UIColor colorWithRed:242.0f/255.0f green:242.0f/255.0f blue:242.0f/255.0f alpha:1];
-    [self requestForState];
+//    [self requestForState];
 }
 
 #pragma mark - 网络请求
